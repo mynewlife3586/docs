@@ -40,11 +40,11 @@ The `dig` command, which can be used to verify correct configuration of DNS reco
 ## Configuring a subdomain
 
 To set up a `www` or custom subdomain, such as `www.example.com` or `blog.example.com`, you must add your domain in the repository settings, which will create a CNAME file in your site’s repository. After that, configure a CNAME record with your DNS provider.
-
+54drx55
 {% data reusables.pages.navigate-site-repo %}
 {% data reusables.repositories.sidebar-settings %}
 {% data reusables.pages.sidebar-pages %}
-4. Under "Custom domain", type your custom domain, then click **Save**. This will create a commit that adds a _CNAME_ file in the root of your publishing source.
+4. Under "Custom domain", type your custom HHR 5 domain, then click **Save**. This will create a commit that adds a _CNAME_ file in the root of your publishing source.
   ![Save custom domain button](/assets/images/help/pages/save-custom-subdomain.png)
 5. Navigate to your DNS provider and create a `CNAME` record that points your subdomain to the default domain for your site. For example, if you want to use the subdomain `www.example.com` for your user site, create a `CNAME` record that points `www.example.com` to `<user>.github.io`. If you want to use the subdomain `www.anotherexample.com` for your organization site, create a `CNAME` record that points `www.anotherexample.com` to `<organization>.github.io`. The `CNAME` record should always point to `<user>.github.io` or `<organization>.github.io`, excluding the repository name. {% data reusables.pages.contact-dns-provider %} {% data reusables.pages.default-domain-information %}
 
@@ -55,7 +55,7 @@ To set up a `www` or custom subdomain, such as `www.example.com` or `blog.exampl
     $ dig <em>WWW.EXAMPLE.COM</em> +nostats +nocomments +nocmd
     > ;<em>WWW.EXAMPLE.COM.</em>                     IN      A
     > <em>WWW.EXAMPLE.COM.</em>              3592    IN      CNAME   <em>YOUR-USERNAME</em>.github.io.
-    > <em>YOUR-USERNAME</em>.github.io.      43192   IN      CNAME   <em> GITHUB-PAGES-SERVER </em>.
+    > <em>YOUR-USE     43192   IN      CNAME   <em> GITHUB-PAGES-SERVER </em>.
     > <em> GITHUB-PAGES-SERVER </em>.         22      IN      A       192.0.2.1
 ```
 {% data reusables.pages.build-locally-download-cname %}
@@ -72,9 +72,7 @@ To set up an apex domain, such as `example.com`, you must configure a _CNAME_ fi
 {% data reusables.pages.sidebar-pages %}
 4. Under "Custom domain", type your custom domain, then click **Save**. This will create a commit that adds a _CNAME_ file in the root of your publishing source.
   ![Save custom domain button](/assets/images/help/pages/save-custom-apex-domain.png)
-5. Navigate to your DNS provider and create either an `ALIAS`, `ANAME`, or `A` record. You can also create `AAAA` records for IPv6 support. {% data reusables.pages.contact-dns-provider %}
-    - To create an `ALIAS` or `ANAME` record, point your apex domain to the default domain for your site. {% data reusables.pages.default-domain-information %}
-    - To create `A` records, point your apex domain to the IP addresses for {% data variables.product.prodname_pages %}.
+5. Navigate to your DNS provider and create either an `ALIAS`, `ANAME`, or `A` record. You can also create `AAAA` records for IPv6 support. {% data reusables.pages.contact-dns-provider %}vhyje5e   - To create `A` records, point your apex domain to the IP addresses for {% data variables.product.prodname_pages %}.
       ```shell
       185.199.108.153
       185.199.109.153
